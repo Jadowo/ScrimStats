@@ -1,5 +1,6 @@
 <?php
-  $connect = mysqli_connect("localhost", "root", "password", "schematest");
+  $dbcfg = include('config.php');
+  $connection = new mysqli($dbcfg['host'], $dbcfg['user'], $dbcfg['pass'], $dbcfg['dbname']);
   $query = "SELECT auth_id,
     name,
     COUNT(ps.demo_id) AS total_Games,
@@ -20,7 +21,7 @@
     INNER JOIN demo_demos AS d
     ON ps.demo_id = d.demo_id
     GROUP BY auth_id";
-  $result = mysqli_query($connect, $query);
+  $result = mysqli_query($connection, $query);
 ?>
 <html>
   <head>
