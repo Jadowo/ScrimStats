@@ -64,7 +64,7 @@ footer {
 .stats-table thead tr td {
     padding:10px;
     padding-top:1px;
-    padding-bottom:4px;
+    padding-bottom:1em;
     text-align:center;
     border: none;
     border-bottom: 2px #555 solid;
