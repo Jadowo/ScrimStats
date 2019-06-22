@@ -1,0 +1,17 @@
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+<Files config.php>
+Order allow,deny
+Deny from all
+</Files>
+<FilesMatch "\.(cfg)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "\.(log)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
